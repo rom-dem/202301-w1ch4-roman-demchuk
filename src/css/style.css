@@ -1,0 +1,9 @@
+@import url(/node_modules/@fontsource/nunito/400.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+}
