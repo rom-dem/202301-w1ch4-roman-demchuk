@@ -1,9 +1,122 @@
-@import url(/node_modules/@fontsource/nunito/400.css);
+@import url(/node_modules/@fontsource/nunito/800.css);
+
+:root {
+  --color-accent: #ed6436;
+  --font-main: "Nunito", sans-serif;
+  --text-size-big: 2rem;
+  --text-size-small: 1rem;
+}
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-main);
+  font-size: var(--text-size-small);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__title {
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.menu__text {
+  font-size: 3.5rem;
+}
+
+.menu__button {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: 0 32 32;
+  color: #fff;
+  font-family: var(--font-main);
+  padding: 20px 30px;
+  margin: 30 0 50 0;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.menu__button:hover {
+  background-color: #fff;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.activities {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.activities__article img {
+  width: 500;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .menu {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80 0 80;
+    position: relative;
+  }
+
+  .menu__title {
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .menu__text {
+    font-size: 3.5rem;
+  }
+
+  .menu__button {
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: 0 32 32;
+    color: #fff;
+    font-family: var(--font-main);
+    padding: 20px 30px;
+    margin: 30 0 50 0;
+    text-transform: uppercase;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 80;
+  }
+
+  .menu__button:hover {
+    background-color: #fff;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .activities {
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+    padding: 0 70 110 70;
+    gap: 30px;
+  }
+
+  .activities__article img {
+    object-fit: cover;
+    height: 430px;
+    width: 100%;
+    border-radius: 30px;
+  }
 }
